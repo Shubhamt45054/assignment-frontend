@@ -1,13 +1,57 @@
-# React + Vite
+# Feedback Form Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend application for the Feedback Form. It provides a user-friendly interface for submitting and viewing feedback.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React**: JavaScript library for building user interfaces
+- **Vite**: Next Generation Frontend Tooling
+- **Tailwind CSS**: Utility-first CSS framework
+- **React Router**: For client-side routing
+- **Axios**: For making HTTP requests
+- **React Icons**: For icons
+- **React Toastify**: For notifications
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# assignment-frontend" 
+```
+frontend/
+├── src/
+│   ├── components/
+│   │   ├── FeedbackForm.jsx    # Form component for feedback submission
+│   │   ├── FeedbackList.jsx    # Component to display feedbacks
+│   │   └── FeedbackItem.jsx    # Individual feedback item component
+│   ├── pages/
+│   │   ├── Home.jsx           # Home page
+│   │   └── Feedback.jsx       # Feedback page
+│   ├── services/
+│   │   └── api.js            # API service for backend communication
+│   ├── App.jsx               # Main application component
+│   ├── main.jsx              # Application entry point
+│   └── index.css             # Global styles
+├── public/                   # Static assets
+├── package.json             # Project dependencies
+└── vite.config.js           # Vite configuration
+```
+
+## API Integration
+
+The frontend communicates with the backend API at `https://obliged-jeanie-vikers-of-q-fb1222e7.koyeb.app/api/feedback`:
+
+- `GET /feedbacks`: Fetch all feedbacks
+- `POST /submit-feedback`: Submit new feedback
+
+
+## Local Development Setup
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Create `.env` file with required variables
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+5. Open [http://localhost:5173](http://localhost:5173) in your browser
