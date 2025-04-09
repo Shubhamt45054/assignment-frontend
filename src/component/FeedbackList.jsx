@@ -6,7 +6,7 @@ const FeedbackList = () => {
   const [feedbacks, setFeedbacks] = useState([])
   const [loading, setLoading] = useState(false)
 
-  const BASE_URL="http://localhost:5000/";
+  const BASE_URL="https://obliged-jeanie-vikers-of-q-fb1222e7.koyeb.app/";
 
   const fetchFeedbacks = async () => {
     setLoading(true)

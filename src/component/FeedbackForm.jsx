@@ -9,7 +9,7 @@ const FeedbackForm = () => {
     message: ''
   })
 
-  const BASE_URL="http://localhost:5000/";
+  const BASE_URL="https://obliged-jeanie-vikers-of-q-fb1222e7.koyeb.app/";
 
   const [loading, setLoading] = useState(false)
   const [errors, setErrors] = useState({})
