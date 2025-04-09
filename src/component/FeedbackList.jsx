@@ -6,11 +6,13 @@ const FeedbackList = () => {
   const [feedbacks, setFeedbacks] = useState([])
   const [loading, setLoading] = useState(false)
 
+  const BASE_URL="http://localhost:5000/";
+
   const fetchFeedbacks = async () => {
     setLoading(true)
     try {
-      const response = await axios.get('http://localhost:5000/api/feedback/feedbacks')
-      console.log('Response data:', response.data)
+      const response = await axios.get(`${BASE_URL}api/feedback/feedbacks`)
+      // console.log('Response data:', response.data)
       
       if (Array.isArray(response.data)) {
         setFeedbacks(response.data)
@@ -67,7 +69,7 @@ const FeedbackList = () => {
                     <p className="text-sm text-indigo-600">{feedback.email}</p>
                   </div>
                 </div>
-                
+
                 <div className="mt-4">
                   <p className="text-gray-600">{feedback.message}</p>
                 </div>

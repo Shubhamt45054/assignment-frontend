@@ -9,6 +9,8 @@ const FeedbackForm = () => {
     message: ''
   })
 
+  const BASE_URL="http://localhost:5000/";
+
   const [loading, setLoading] = useState(false)
   const [errors, setErrors] = useState({})
 
@@ -61,7 +63,7 @@ const FeedbackForm = () => {
     setLoading(true)
     try {
       // console.log('Submitting feedback:', formData)
-      const response = await axios.post('http://localhost:5000/api/feedback/submit-feedback', formData)
+      const response = await axios.post(`${BASE_URL}api/feedback/submit-feedback`, formData)
       // console.log('Response:', response.data)
       
       if (response.data && response.data._id) {
@@ -151,7 +153,7 @@ const FeedbackForm = () => {
                 <p className="mt-1 text-sm text-red-600">{errors.message}</p>
               )}
             </div>
-            
+
           </div>
 
           <div>
